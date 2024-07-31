@@ -1,0 +1,21 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+var prompt = function(t){return lines.shift();};
+
+var N = parseInt(prompt("Digite um número"));
+var X;
+var cont;
+for (let i = 0; i < N; i++){
+    var cont = 0;
+    var X = parseInt(prompt("Digite um número"));
+    for(let j = 2; j < X; j++){
+        if (X % j == 0) 
+        cont++;
+    }if(cont == 0){
+        console.log(X + " eh primo");
+    }else{
+        console.log(X + " nao eh primo");
+    }
+        	
+}
